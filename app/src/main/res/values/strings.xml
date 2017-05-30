@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Norway</string>
+
+    <!-- Category name for phrases [CHAR LIMIT=20] -->
+    <string name="category_cities">Cities</string>
+
+    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
+    <string name="category_hikes">Hikes</string>
+
+    <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
+    <string name="category_routes">Routes</string>
+
+    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
+    <string name="category_dayplans">Dayplans</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
