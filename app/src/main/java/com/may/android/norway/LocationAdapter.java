@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,10 +18,10 @@ import java.util.ArrayList;
  * Created by Henrik on 30.05.2017.
  */
 
-public class ElemAdapter extends ArrayAdapter<ContentElement> {
+public class LocationAdapter extends ArrayAdapter<Location> {
 
 
-    public ElemAdapter(@NonNull Context context, ArrayList<ContentElement> elem) {
+    public LocationAdapter(@NonNull Context context, ArrayList<Location> elem) {
         super(context, 0, elem);
         // mColorResourceID=color;
     }
@@ -38,40 +37,38 @@ public class ElemAdapter extends ArrayAdapter<ContentElement> {
 
 
         // Get the {@link AndroidFlavor} object located at this position in the list
-        final ContentElement currentElem = getItem(position);
+        final Location currentLocation= getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         TextView miTextView = (TextView) listItemView.findViewById(R.id.heading);
         // Get the version name from the current AndroidFlavor object and
         // set this text on the name TextView
-        miTextView.setText(currentElem.getName());
+        miTextView.setText(currentLocation.getName());
 
         // Find the TextView in the list_item.xml layout with the ID version_number
         TextView enTextView = (TextView) listItemView.findViewById(R.id.description);
         // Get the version number from the current AndroidFlavor object and
         // set this text on the number TextView
-        enTextView.setText(currentElem.getDescription());
+        enTextView.setText(currentLocation.getDescription());
 
         TextView navigateView = (TextView) listItemView.findViewById(R.id.navigate);
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.elemImg);
-        if (currentElem.getHasImage()) {
-            imageView.setImageResource(currentElem.getImageID());
+        if (currentLocation.getHasImage()) {
+            imageView.setImageResource(currentLocation.getImageID());
         } else {
             navigateView.setVisibility(View.GONE);
             imageView.setVisibility(View.GONE);
         }
 
-        navigateView.setOnClickListener(new View.OnClickListener(){
+        navigateView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
-                Uri gmmIntentUri = Uri.parse(currentElem.getGeoLocation());
+            public void onClick(View view) {
+                Uri gmmIntentUri = Uri.parse(currentLocation.getGeoLocation());
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 getContext().startActivity(mapIntent);
             }
         });
-
-
 
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon

@@ -15,4 +15,29 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="nOslo">Oslo</string>
+    <string name="nStavanger">Stavanger</string>
+    <string name="nBergen">Bergen</string>
+    <string name="dOslo">Oslo is a beautiful city featuring:\n
+                -\tVikingskipshuset (a museum for Viking ships)\n
+                -\tthe Munch-museet with Munch’s famous “Scream”\n
+                -\tthe fortress Akershus\n
+                -\tan opera house\n
+                -\tand a famous castle\n</string>
+    <string name="dStavanger">There is not too much to see in Stavanger, except for its cathedral and the norwegian museum of oil.</string>
+    <string name="dBergen">Bergen offers the world famous Bryggen houses, as well as Fløyen, a hiking region, and the Hanseatic museum.</string>
+    <string name="gOslo">geo:59.9139,10.7522</string>
+    <string name="gStavanger">geo:60.3913,5.3221</string>
+    <string name="gBergen">geo:58.97,5.7331</string>
+
+    <string name="nTrolltunga">Trolltunga</string>
+    <string name="nPreikestolen">Preikestolen</string>
+    <string name="nKjerag">Kjerag</string>
+    <string name="dTrolltunga">-\tDuration: 11hours (6 hours up, 1 hour at Trolltunga, and 4 hours back down)\n-\tDistance: 22km\n-\tTip: First kilometer is the hardest!\n-\tMore: http://www.norwaytonowhere.com/a-guide-to-hiking-trolltunga</string>
+    <string name="dPreikestolen">-\tDuration: 4hours (return)\n-\tDistance: 6km, 604m high\n-\tMore: https://www.visitnorway.de/listings/preikestolen/185528</string>
+    <string name="dKjerag">-\tDuration: 6 to 8 hours (return)\n-\tDistance: 12km, 500m climbing\n-\tMore: http://www.earthtrekkers.com/kjeragbolten-hike-complete-guide/</string>
+    <string name="gTrolltunga">geo:60.124473,6.740110</string>
+    <string name="gPreikestolen">geo:58.59115,6.1882433</string>
+    <string name="gKjerag">geo:59.034792,6.577576</string>
 </resources>

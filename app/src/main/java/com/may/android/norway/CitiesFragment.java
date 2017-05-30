@@ -15,37 +15,25 @@ import java.util.ArrayList;
  */
 public class CitiesFragment extends Fragment {
 
-
     public CitiesFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.category_list, container, false);
 
-        ArrayList<ContentElement> elems = new ArrayList<ContentElement>();
-        elems.add(new ContentElement("Oslo", "Oslo is a beautiful city featuring:\n" +
-                "-\tVikingskipshuset (a museum for Viking ships)\n" +
-                "-\tthe Munch-museet with Munch’s famous “Scream”\n" +
-                "-\tthe fortress Akershus\n" +
-                "-\tan opera house\n" +
-                "-\tand a famous castle\n", R.drawable.oslo, "geo:59.9139,10.7522"));
-        elems.add(new ContentElement("Bergen", "Bergen offers the world famous Bryggen houses, as well as Fløyen, a hiking region, and the Hanseatic museum.", R.drawable.bergen, "geo:60.3913,5.3221"));
-        elems.add(new ContentElement("Stavanger", "There is not too much to see in Stavanger, except for it's cathedral and the norwegian museum of oil.", R.drawable.stavanger, "geo:58.97,5.7331"));
+        ArrayList<Location> elems = new ArrayList<Location>();
+        elems.add(new Location(getString(R.string.nOslo),getString(R.string.dOslo), R.drawable.oslo,getString(R.string.gOslo) ));
+        elems.add(new Location(getString(R.string.nBergen),getString(R.string.dBergen), R.drawable.bergen, getString(R.string.gBergen)));
+        elems.add(new Location(getString(R.string.nStavanger),getString(R.string.dStavanger), R.drawable.stavanger, getString(R.string.gStavanger)));
 
-        ElemAdapter adapter = new ElemAdapter(getActivity(), elems);
+        LocationAdapter adapter = new LocationAdapter(getActivity(), elems);
         final ListView listView = (ListView) rootView.findViewById(R.id.list);
-
-
         listView.setAdapter(adapter);
-
         return rootView;
     }
-
-
 }
 
 

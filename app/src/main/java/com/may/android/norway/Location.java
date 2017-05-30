@@ -4,14 +4,14 @@ package com.may.android.norway;
  * Created by Henrik on 30.05.2017.
  */
 
-public class ContentElement {
+public class Location {
     private int imageID;
     private String description;
     private String name;
     private boolean hasImage;
     private String geoLocation;
 
-    public ContentElement(String mName, String mSites, int mImageID, String mgeoLoc) {
+    public Location(String mName, String mSites, int mImageID, String mgeoLoc) {
         name = mName;
         description = mSites;
         imageID = mImageID;
@@ -19,7 +19,7 @@ public class ContentElement {
         geoLocation=mgeoLoc;
     }
 
-    public ContentElement(String mName, String mSites) {
+    public Location(String mName, String mSites) {
         name = mName;
         description = mSites;
         hasImage=false;
