@@ -13,9 +13,6 @@
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_dayplans">Dayplans</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="nOslo">Oslo</string>
     <string name="nStavanger">Stavanger</string>
     <string name="nBergen">Bergen</string>
